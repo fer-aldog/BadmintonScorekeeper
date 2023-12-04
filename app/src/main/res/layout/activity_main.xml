@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D7F4B9"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:ignore="ExtraText">
+
+    //title <Space
+        android:layout_width="1dp"
+        android:layout_height="40dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:fontFamily="serif"
+        android:text="   Badminton"
+        android:textSize="44sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:fontFamily="sans-serif-light"
+        android:text="Scorekeeper    "
+        android:textSize="38sp" />
+    <Space
+        android:layout_width="1dp"
+        android:layout_height="40dp" /> //end of title
+
+    //team name <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/white" />
+    <Space
+        android:layout_width="1dp"
+        android:layout_height="10dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Team A"
+        android:textSize="26sp" />
+    <Space
+        android:layout_width="1dp"
+        android:layout_height="15dp" /> //end of team name
+
+    //set things beside each other <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        //layout for team A's score <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:text="Score:"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/scoreATV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00"
+                android:textSize="45sp" />
+
+            <Button
+                android:id="@+id/updAscoreBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="update score"
+                android:textColorHighlight="#FFFFFF"
+                android:textColorLink="#FFFFFF"
+                app:backgroundTint="#79A64F" />
+        </LinearLayout> //end of team A's score
+
+        <Space
+            android:layout_width="60dp"
+            android:layout_height="1dp" />
+
+        //layout for team A's faults <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:text="Faults:"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/faultATV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00"
+                android:textSize="45sp" />
+
+            <Button
+                android:id="@+id/updAfaultBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="update faults"
+                app:backgroundTint="#79A64F" />
+
+        </LinearLayout> //end of team A's faults
+    </LinearLayout> //end for team a
+
+    <Space
+        android:layout_width="1dp"
+        android:layout_height="30dp" />
+
+    //team name <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/white" />
+    <Space
+        android:layout_width="1dp"
+        android:layout_height="10dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Team B"
+        android:textSize="26sp" />
+    <Space
+        android:layout_width="1dp"
+        android:layout_height="15dp" /> //end of team name
+
+    //layout for team B's score <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:text="Score:"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/scoreBTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00"
+                android:textSize="45sp" />
+
+            <Button
+                android:id="@+id/updBscoreBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="update score"
+                app:backgroundTint="#79A64F" />
+        </LinearLayout> //end of team B's score
+
+        <Space
+            android:layout_width="60dp"
+            android:layout_height="1dp" />
+
+        //layout for team B's faults <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:text="Faults:"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/faultBTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00"
+                android:textSize="45sp" />
+
+            <Button
+                android:id="@+id/updBfaultBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="update faults"
+                app:backgroundTint="#79A64F" />
+        </LinearLayout> //end of team B's faults
+    </LinearLayout>//end of setting things beside each other
+
+    <Space
+        android:layout_width="1dp"
+        android:layout_height="30dp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/white" />
+    <Space
+        android:layout_width="1dp"
+        android:layout_height="20dp" />
+
+    //reset button <Button
+        android:id="@+id/resetBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="RESET ALL"
+        app:backgroundTint="#579A51" /> //end of reset button
+</LinearLayout>
